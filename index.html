@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link rel="stylesheet" href="./assets/main.css" />
+
+    <title>
+      Frontend Mentor | Newsletter sign-up form with success message
+    </title>
+  </head>
+  <body>
+    <div id="modalcontainer" class="successfulmodal">
+      <div class="modal">
+        <img src="./assets/images/icon-list.svg" alt="" />
+        <h1>thanks for subscribing!</h1>
+        <p>
+          A confirmation email has been sent to
+          <b> <span id="useremail"></span></b> please open it and click the
+          button insie to confirm your subscription
+        </p>
+
+        <button id="modalbutton">Dissmiss</button>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col1 animate__animated animte__jackInTheBox">
+          <h1>Stay Updated!</h1>
+          <p>Join 60,000+ product managers receiving monthly updates on:</p>
+
+          <div class="itemslist">
+            <div class="item1">
+              <span><img src="/assets/images/icon-list.svg" alt="" /></span>
+              <p>product discovery and building what matters</p>
+            </div>
+            <div class="item1">
+              <span><img src="/assets/images/icon-list.svg" alt="" /></span>
+              <p>Measuring to ensure updates are a success</p>
+            </div>
+            <div class="item1">
+              <span><img src="/assets/images/icon-list.svg" alt="" /></span>
+              <p>And much more</p>
+            </div>
+          </div>
+
+          <form id="form">
+            <div class="email">
+              <label for="Email">Email addres</label>
+              <input
+                type="email"
+                name="Email"
+                id="email"
+                placeholder=""
+                autofocus
+              />
+              <p id="placeolder">Enter your email address</p>
+              <span id="emailerror"></span>
+            </div>
+
+            <button>Subscribe to monthly newsletter</button>
+          </form>
+        </div>
+        <div class="col2">
+          <img
+            class="animate__animated animate__zoomIn"
+            src="./assets/images/illustration-sign-up-desktop.svg"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+    <script src="assets/main.js"></script>
+  </body>
+</html>

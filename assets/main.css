@@ -1,0 +1,221 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bodybackcolor: hsl(234, 29%, 20%);
+  --containercolor: hsl(0, 0%, 100%);
+  --headingColor: hsl(235, 18%, 26%);
+  --headingColorhover: hsl(236, 11%, 31%);
+  --textcolor: hsl(250, 26%, 38%);
+  --checkboxcolor: hsl(4, 100%, 67%);
+}
+
+body {
+  background-color: var(--bodybackcolor);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Roboto", sans-serif;
+  height: 100dvh;
+}
+
+.container {
+  background-color: var(--containercolor);
+  display: flex;
+  width: 100%;
+  max-width: 1000px;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+.container .row {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column-reverse;
+
+  .col1 {
+    padding: 2rem;
+    overflow: hidden;
+
+    h1 {
+      font-size: 2.7rem;
+      font-weight: 700;
+      font-style: normal;
+      color: var(--headingColor);
+    }
+
+    p {
+      color: var(--textcolor);
+      margin: 10px 0 20px;
+      font-weight: 500;
+      font-size: 0.95rem;
+      text-transform: capitalize;
+    }
+
+    .itemslist .item1 {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    #form {
+      .email {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+
+        label {
+          font-size: 0.8rem;
+          font-weight: bolder;
+          color: var(--headingColor);
+          padding-bottom: 14px;
+        }
+
+        input {
+          padding: 19px 20px;
+          border-radius: 10px;
+          border: 1px solid var(--textcolor);
+          outline: none;
+          background-color: transparent;
+        }
+
+        p {
+          position: absolute;
+          top: 42%;
+          left: 3%;
+          /* display: none; */
+          font-size: 0.8rem;
+          transition: all ease-out 0.3s;
+          font-style: italic;
+        }
+
+        input:focus + p,
+        input:not(:placeholder-shown) + p {
+          top: 17%;
+          left: 3%;
+          background-color: rgb(255, 255, 255);
+          padding-inline: 10px;
+          font-size: 0.6rem;
+        }
+
+        span {
+          font-size: 0.7rem;
+          /* display: none; */
+          color: rgb(241, 13, 13);
+          font-style: italic;
+          margin-top: 3px;
+          transition: all ease-in-out 0.3s;
+        }
+      }
+
+      button {
+        background-color: var(--headingColor);
+        color: rgb(226, 223, 223);
+        padding: 1.2em;
+        border-radius: 10px;
+        margin: 20px 0;
+        width: 100%;
+        font-weight: bold;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: var(--headingColorhover);
+      }
+    }
+  }
+}
+
+.container .row .col2 {
+  padding: 22px;
+}
+
+.animate__zoomIn {
+  animation-duration: 1s;
+}
+.animate__jackInTheBox {
+  animation-duration: 1s;
+}
+
+.successfulmodal {
+  position: fixed;
+  background-color: var(--bodybackcolor);
+  height: 100dvh;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  width: 100%;
+}
+
+.modal {
+  background-color: var(--containercolor);
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.modal img {
+  width: 15%;
+}
+
+.modal h1 {
+  font-size: 2rem;
+  text-transform: capitalize;
+  font-weight: 700;
+  color: var(--headingColor);
+  padding: 10px 0;
+}
+
+.modal p {
+  color: var(--textcolor);
+  line-height: 1.5rem;
+}
+
+.modal button {
+  width: 100%;
+  background-color: var(--bodybackcolor);
+  color: white;
+  border: none;
+  outline: none;
+  border-radius: 7px;
+  padding: 15px 0;
+  margin: 18px 0;
+  cursor: pointer;
+  transition: all ease-in-out 0.2s;
+}
+
+.closemodal {
+  display: flex;
+}
+
+.modal button:hover {
+  background-color: var(--headingColorhover);
+}
+@media only screen and (min-width: 40rem) {
+  .container .row {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+
+  .container .row .col2 {
+    background-image: none;
+  }
+
+  .container .row .col2 img {
+    display: block;
+    max-width: max-content;
+    width: 100%;
+  }
+}
